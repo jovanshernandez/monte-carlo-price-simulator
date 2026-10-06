@@ -1,4 +1,16 @@
+# Python
 __pycache__/
+*.py[cod]
+.venv/
+venv/
 .pytest_cache/
 *.egg-info/
-.venv/
+build/
+dist/
+
+# Generated reports (charts committed for the README live in docs/images/)
+reports/
+*.png
+!docs/images/*.png
+
+.DS_Store

@@ -3,16 +3,16 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "monte-carlo-stock-sim"
-version = "0.1.0"
-description = "Monte Carlo stock price simulation CLI with testable core logic."
+name = "monte-carlo-price-simulator"
+version = "0.2.0"
+description = "Monte Carlo price simulator: GBM paths, percentile bands, target probabilities, VaR and Expected Shortfall."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
   "matplotlib>=3.8",
   "numpy>=1.26",
   "pandas>=2.0",
-  "yfinance>=0.2",
+  "yfinance>=0.2.40",
 ]
 
 [project.optional-dependencies]
@@ -21,10 +21,10 @@ dev = [
 ]
 
 [project.scripts]
-monte-carlo-stock-sim = "monte_carlo_stock_sim.cli:main"
+mc-sim = "monte_carlo_price_simulator.cli:main"
 
 [tool.setuptools.packages.find]
-include = ["monte_carlo_stock_sim*"]
+include = ["monte_carlo_price_simulator*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
